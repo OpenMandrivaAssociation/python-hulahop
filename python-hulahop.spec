@@ -50,7 +50,7 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root,-)
 %{_datadir}/*
-%{_libdir}/*
+%{_libdir}/hulahop
 %{python_sitelib}/*
 %doc COPYING NEWS
 
