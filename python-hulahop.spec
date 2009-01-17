@@ -16,7 +16,7 @@ Requires: pygtk2.0
 Requires: python  
 Requires: python-xpcom  
 
-BuildRequires: libxulrunner-unstable-devel >= 1.9
+BuildRequires: xulrunner-devel-unstable >= 1.9
 BuildRequires: pygtk2.0-devel  
 BuildRequires: libgtk+2-devel  
 BuildRequires: libpython-devel  
@@ -35,7 +35,8 @@ xpcom API through python.
 
 %build
 %configure  \
-	--disable-static
+	--disable-static \
+	am_cv_python_pyexecdir=%{python_sitelib}
 make 
 
 %install
