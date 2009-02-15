@@ -2,7 +2,7 @@
 
 Name: python-hulahop
 Version: 0.4.8
-Release: %mkrel 1
+Release: %mkrel 2
 Summary: A pygtk widget for embedding mozilla
 License: LGPL
 Group: Development/Python
@@ -12,10 +12,12 @@ Source: http://dev.laptop.org/pub/sugar/sources/hulahop/hulahop-0.4.8.tar.bz2
 
 Patch: python-hulahop-0.4.8-sugar-hulahop-configure.patch
 
+Requires: python-gobject  
 Requires: pygtk2.0  
 Requires: python  
 Requires: python-xpcom  
 
+BuildRequires: python-gobject-devel  
 BuildRequires: xulrunner-devel-unstable >= 1.9
 BuildRequires: pygtk2.0-devel  
 BuildRequires: libgtk+2-devel  
