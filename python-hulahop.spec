@@ -17,12 +17,12 @@ Requires: pygtk2.0
 Requires: python  
 Requires: python-xpcom  
 
-BuildRequires: python-gobject-devel  
-BuildRequires: xulrunner-devel-unstable >= 1.9
-BuildRequires: pygtk2.0-devel  
 BuildRequires: libgtk+2-devel  
+BuildRequires: python-gobject-devel  
+BuildRequires: pygtk2.0-devel  
 BuildRequires: libpython-devel  
 BuildRequires: python-xpcom  
+BuildRequires: xulrunner-devel-unstable >= 1.9
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
