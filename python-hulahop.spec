@@ -17,7 +17,7 @@ Requires: pygtk2.0
 Requires: python  
 Requires: python-xpcom  
 
-BuildRequires: libgtk+2-devel  
+BuildRequires: gtk+2-devel  
 BuildRequires: python-gobject-devel  
 BuildRequires: pygtk2.0-devel  
 BuildRequires: libpython-devel  
