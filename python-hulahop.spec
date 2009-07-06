@@ -42,7 +42,7 @@ echo 'pref("general.useragent.vendorSub", "0.84");' >> data/prefs.js
 echo 'pref("general.useragent.vendorComment", "hulahop/0.4.9");' >> data/prefs.js
 libtoolize --copy --force
 autoreconf -ivf
-%configure --disable-static
+%configure --disable-static am_cv_python_pyexecdir=%{python_sitelib}
 make
 
 %install
