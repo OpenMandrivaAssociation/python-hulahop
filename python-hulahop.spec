@@ -2,7 +2,7 @@
 
 Name: python-hulahop
 Version: 0.4.9
-Release: %mkrel 1
+Release: %mkrel 2
 Summary: A pygtk widget for embedding mozilla
 License: LGPL
 Group: Development/Python
@@ -26,6 +26,7 @@ BuildRequires: xulrunner-devel-unstable >= 1.9
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
+
 %description
 The hulalop library contains a widget for embedding mozilla.
 It's based on pyxpcom and give access to the whole mozilla
@@ -36,21 +37,23 @@ xpcom API through python.
 %patch -p1
 
 %build
-%configure  \
-	--disable-static \
-	am_cv_python_pyexecdir=%{python_sitelib}
-make 
+echo 'pref("general.useragent.vendor", "Sugar Labs");' >> data/prefs.js
+echo 'pref("general.useragent.vendorSub", "0.84");' >> data/prefs.js
+echo 'pref("general.useragent.vendorComment", "hulahop/0.4.9");' >> data/prefs.js
+libtoolize --copy --force
+autoreconf -ivf
+%configure --disable-static
+make
 
 %install
 rm -rf %{buildroot}
-make  \
-	install \
-	DESTDIR=%{buildroot}
+make DESTDIR=%{buildroot} install
+
 
 %clean
 rm -rf %{buildroot}
 
-%files
+%files 
 %defattr(-,root,root,-)
 %{_datadir}/*
 %{_libdir}/hulahop
