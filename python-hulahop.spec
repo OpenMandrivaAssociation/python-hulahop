@@ -40,6 +40,7 @@ echo 'pref(\"general.useragent.vendorSub\", \"#{@release_name}\");' >> data/pref
 echo 'pref(\"general.useragent.vendorComment\", \"hulahop/#{version}\");' >> data/prefs.js
 
 %build
+%define __libtoolize true
 %configure --disable-static am_cv_python_pyexecdir=%{python_sitelib}
 make
 
