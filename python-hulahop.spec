@@ -2,7 +2,7 @@
 
 Name: python-hulahop
 Version: 0.5.1
-Release: %mkrel 3
+Release: %mkrel 4
 Summary: A pygtk widget for embedding mozilla
 License: LGPL
 Group: Development/Python
@@ -23,7 +23,7 @@ BuildRequires: python-gobject-devel
 BuildRequires: pygtk2.0-devel  
 BuildRequires: libpython-devel  
 BuildRequires: python-xpcom  
-BuildRequires: libxulrunner-devel  
+BuildRequires: xulrunner-devel  
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
