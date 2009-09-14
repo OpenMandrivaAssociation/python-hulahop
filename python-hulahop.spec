@@ -2,7 +2,7 @@
 
 Name: python-hulahop
 Version: 0.5.1
-Release: %mkrel 2
+Release: %mkrel 3
 Summary: A pygtk widget for embedding mozilla
 License: LGPL
 Group: Development/Python
@@ -23,7 +23,7 @@ BuildRequires: python-gobject-devel
 BuildRequires: pygtk2.0-devel  
 BuildRequires: libpython-devel  
 BuildRequires: python-xpcom  
-BuildRequires: xulrunner-devel-unstable  
+BuildRequires: libxulrunner-devel  
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
@@ -39,7 +39,7 @@ xpcom API through python.
 
 %build
 %define __libtoolize true
-%configure --disable-static am_cv_python_pyexecdir=%{python_sitelib}
+%configure --disable-static am_cv_python_pyexecdir=%{py_platsitedir}
 make
 
 %install
@@ -54,6 +54,6 @@ rm -rf %{buildroot}
 %defattr(-,root,root,-)
 %{_datadir}/*
 %{_libdir}/hulahop
-%{python_sitelib}/*
+%{py_platsitedir}/*
 %doc COPYING NEWS
 
