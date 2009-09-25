@@ -2,14 +2,14 @@
 #       See http://wiki.sugarlabs.org/go/Deployment_Team/jhconvert for details
 
 Name: python-hulahop
-Version: 0.5.2
-Release: %mkrel 2
+Version: 0.6.0
+Release: %mkrel 1
 Summary: A pygtk widget for embedding mozilla
 License: LGPL
 Group: Development/Python
 Url: http://sugarlabs.org/
 
-Source: http://download.sugarlabs.org/sources/sucrose/glucose/hulahop/hulahop-0.5.2.tar.bz2
+Source: http://download.sugarlabs.org/sources/sucrose/glucose/hulahop/hulahop-0.6.0.tar.bz2
 
 Requires: python-gobject  
 Requires: pygtk2.0  
@@ -35,7 +35,7 @@ It's based on pyxpcom and give access to the whole mozilla
 xpcom API through python.
 
 %prep
-%setup -q -n hulahop-0.5.2
+%setup -q -n hulahop-0.6.0
 
 
 %build
