@@ -2,19 +2,19 @@
 #       See http://wiki.sugarlabs.org/go/Deployment_Team/jhconvert for details
 
 Name: python-hulahop
-Version: 0.6.0
+Version: 0.7.1
 Release: %mkrel 1
 Summary: A pygtk widget for embedding mozilla
 License: LGPL
 Group: Development/Python
 Url: http://sugarlabs.org/
 
-Source: http://download.sugarlabs.org/sources/sucrose/glucose/hulahop/hulahop-0.6.0.tar.bz2
+Source: http://download.sugarlabs.org/sources/sucrose/glucose/hulahop/hulahop-0.7.1.tar.bz2
 
 Requires: python-gobject  
 Requires: pygtk2.0  
 Requires: python  
-Requires: python-xpcom  
+Requires: python-xpcom >= 1.9.2
 
 BuildRequires: autoconf  
 BuildRequires: automake  
@@ -23,7 +23,7 @@ BuildRequires: libtool
 BuildRequires: python-gobject-devel  
 BuildRequires: pygtk2.0-devel  
 BuildRequires: libpython-devel  
-BuildRequires: python-xpcom  
+BuildRequires: python-xpcom-devel >= 1.9.2
 BuildRequires: xulrunner-devel  
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
@@ -35,12 +35,12 @@ It's based on pyxpcom and give access to the whole mozilla
 xpcom API through python.
 
 %prep
-%setup -q -n hulahop-0.6.0
+%setup -q -n hulahop-0.7.1
 
 
 %build
 %define __libtoolize true
-%configure --disable-static am_cv_python_pyexecdir=%{python_sitelib}
+%configure --disable-static am_cv_python_pythondir=%{python_sitelib} am_cv_python_pyexecdir=%{python_sitelib}
 make
 
 %install
