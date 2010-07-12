@@ -3,7 +3,7 @@
 
 Name: python-hulahop
 Version: 0.7.1
-Release: %mkrel 1
+Release: %mkrel 2
 Summary: A pygtk widget for embedding mozilla
 License: LGPL
 Group: Development/Python
