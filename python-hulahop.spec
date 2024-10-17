@@ -4,7 +4,7 @@ Release: %mkrel 2
 Summary: A pygtk widget for embedding mozilla
 License: LGPL
 Group: Development/Python
-Url: http://sugarlabs.org/
+Url: https://sugarlabs.org/
 
 Source: http://download.sugarlabs.org/sources/sucrose/glucose/hulahop/hulahop-%{version}.tar.bz2
 
