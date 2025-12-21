@@ -13,6 +13,8 @@ Requires: pygtk2.0
 Requires: python  
 Requires: python-xpcom >= 1.9.2
 
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
 BuildRequires: autoconf  
 BuildRequires: automake  
 BuildRequires: gtk+2-devel  
